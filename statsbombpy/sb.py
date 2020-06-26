@@ -36,7 +36,7 @@ def matches(
         )
         for col in ["season", "home_team", "away_team"]:
             matches[col] = matches[col].apply(lambda c: c[f"{col}_name"])
-        for col in ["competition_stage", "stadium", "referee"]:
+        for col in ["competition_stage"]:
             matches[col] = matches[col].apply(
                 lambda x: x["name"] if not pd.isna(x) else x
             )
